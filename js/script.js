@@ -12,8 +12,8 @@ function start() {
 
 function rememberMyFilms() {
 	for (let i = 0; i < 2; i++) {
-		const recentFilm = prompt('Какой фильм вы посмотрели недавно?', ''),
-					recentFilmMark = +prompt('На сколько его оцените?', 0);
+		const recentFilm = prompt('Какой фильм вы посмотрели недавно?', '').trim(),
+					recentFilmMark = +prompt('На сколько его оцените?', 0).trim();
 		
 		if (recentFilm != '' && recentFilm != null && recentFilm.length <= 50 && isNaN(recentFilmMark) === false) {
 			personalMoviesDB.movies[recentFilm] = recentFilmMark;
